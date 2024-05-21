@@ -1,4 +1,7 @@
 import './App.css';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import 
 
 function App() {
   return (
@@ -9,7 +12,7 @@ function App() {
           <Container maxWidth="xl">
                 <Routes>
                   <Route path='/' element={<Home/>} exact/>
-                  <Route path='/profil' element={<User/>}/>
+                  <Route path='/profil/:userId' element={<User/>}/>
                   <Route path='/putovanja' element={<Trips/>}/>
                   <Route path='/prijava' element={<Login/>}/>
                 </Routes>
