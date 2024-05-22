@@ -8,16 +8,17 @@ const Header = () => {
 
     const handleButtonClick = (buttonId) => {
         setActiveButton(buttonId);
+        window.scroll(0, 0);
     };
 
     return (
-        <span onClick={()=> window.scroll(0,0)} className='header'>
+        <header className='header'>
             <span className="header_title">
                 <Link to='/' onClick={() => handleButtonClick(1)}>
                     TrekTrip
                 </Link>
             </span>
-            <div className="navbar">
+            <nav className="navbar">
                 <Link to='/profil'>
                     <button className={`nav_button ${activeButton === 2 ? 'active' : ''}`}
                         onClick={() => handleButtonClick(2)}>
@@ -43,8 +44,8 @@ const Header = () => {
                         Odjava
                     </button>
                 )
-            </div>
-        </span>  
+            </nav>
+        </header>  
     )
 }
 
